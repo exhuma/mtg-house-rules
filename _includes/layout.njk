@@ -23,7 +23,7 @@
   </style>
 </head>
 <body class="fantasy-bg font-body">
-  <nav class="mtg-navbar font-fantasy text-2xl">
+  <nav class="mtg-navbar font-body text-lg">
     {% for page in collections.pages %}
       <a href="{{ page.url }}" class="{% if page.url == page.url or page.url == page.inputPath %}active{% endif %}">{{ page.data.title or page.fileSlug }}</a>
     {% endfor %}

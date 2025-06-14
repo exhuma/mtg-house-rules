@@ -23,23 +23,42 @@
   margin-bottom: 1.5rem;
 }
 .mtg-navbar {
-  @apply flex justify-center bg-mtgBlack bg-opacity-60 px-4 py-2 items-center shadow-mtg rounded-b-xl backdrop-blur-md mb-8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(34, 31, 32, 0.45); /* More transparent for glass look */
+  box-shadow: 0 4px 16px 0 rgba(35,31,32,0.18);
+  border-radius: 0; /* No border radius for the top bar */
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(12px) saturate(1.2);
 }
 .mtg-navbar a {
-  @apply relative mx-2 px-6 py-2 font-bold text-mtgGold text-2xl transition-all duration-200 rounded-xl;
-  background: rgba(255,255,255,0.10);
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
-  border: 1.5px solid rgba(199,160,8,0.4);
-  border-bottom: none;
-  backdrop-filter: blur(4px);
+  font-family: 'EB Garamond', serif;
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 0.5em 1.2em;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #f8f6e7; /* Bright color for readability */
+  background: rgba(255,255,255,0.13); /* More transparent for glass look */
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 1.5px 4px 0 rgba(0,0,0,0.10), 0 0.5px 0.5px 0 rgba(255,255,255,0.10) inset;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+  text-decoration: none;
+  position: relative;
+  backdrop-filter: blur(8px) saturate(1.2);
 }
 .mtg-navbar a:not(:last-child) {
   border-right: none;
 }
 .mtg-navbar a.active, .mtg-navbar a:hover {
-  background: rgba(255,255,255,0.30);
-  color: #231f20;
-  border-color: #c7a008;
+  background: rgba(255,255,255,0.28);
+  color: #fffbe6; /* Even brighter on hover/active */
+  box-shadow: 0 3px 12px 0 rgba(30,107,168,0.13), 0 0.5px 0.5px 0 rgba(255,255,255,0.13) inset;
+  transform: translateY(-2px) scale(1.04);
+  text-decoration: none;
   z-index: 1;
 }
 body {

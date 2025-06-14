@@ -13,8 +13,9 @@ title: Draft
 * If the second-to-last card is a land, it is *not* discarded.
 * Each player picks **two cards** on each pick.
 * **Do not** pick cards just to prohibit someone else from playing it. For
-  example, you are locked in for red/blue and see a powerful green card in your
-  cards. **Do not** pick it just because you don't want to play against it.
+  example, you are locked in for <mana>RU</mana> and see a powerful
+  <mana>G</mana> card in your cards. **Do not** pick it just because you don't
+  want to play against it.
 
 ## Rare & Mythic Cards
 
