@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Magic: The Gathering inspired custom styles */
+.mtg-card {
+  @apply bg-mtgWhite border-4 border-mtgGold rounded-lg shadow-mtg p-6 mb-6 prose prose-lg;
+}
+.mtg-navbar {
+  @apply flex bg-mtgBlack text-mtgGold px-4 py-2 items-center shadow-mtg;
+}
+.mtg-navbar a {
+  @apply text-mtgGold hover:text-mtgWhite px-4 py-2 rounded-t-lg transition-colors duration-200 font-bold;
+}
+.mtg-navbar a.active {
+  @apply bg-mtgGold text-mtgBlack;
+}
+body {
+  @apply bg-mtgGreen bg-opacity-10 min-h-screen;
+}
