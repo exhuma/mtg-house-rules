@@ -37,9 +37,9 @@ the following rules (pick only one):
 * You have a candidate for a commander with the mana-cost <mana>2BU</mana> but
   you want to play a red/black/blue deck.
   
-  **Solution:** Convert one generic to red. New mana-cost: 1RBU.
-* You have a candidate for a commander with the mana-cost BU but you want to
+  **Solution:** Convert one generic to red. New mana-cost: <mana>1RBU</mana>.
+* You have a candidate for a commander with the mana-cost <mana>BU</mana> but you want to
   play a red/black/blue deck.
   
-  **Solution:** Add one red mana-pip. New mana-cost: RBU.
+  **Solution:** Add one red mana-pip. New mana-cost: <mana>RBU</mana>.
 

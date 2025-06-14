@@ -48,8 +48,8 @@ body {
 .mana-symbol {
   display: inline-block;
   vertical-align: middle;
-  height: 1em;
-  width: 1em;
+  height: 15px;
+  width: 15px;
   margin: 0 0.05em;
   object-fit: contain;
 }
