@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Generate change-log.json
+        run: node scripts/generate-changelog.js
+
       - name: Build site
         run: ELEVENTY_ENV=production npm run build
 

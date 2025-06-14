@@ -44,10 +44,16 @@
     </div>
     <div class="change-log">
       {% if changeLog.length > 0 %}
+        <h3>Recent Changes</h3>
         <ul style="list-style:none; margin:0; padding:0;">
           {% for entry in changeLog %}
-            <li>
-              <span>[{{ entry.timestamp }}] Updated by {{ entry.author }}</span>
+            <li style="margin-bottom:0.5em;">
+              <div><strong>{{ entry.message }}</strong></div>
+              <div>
+                <span style="color:#555;">[{{ entry.date }}]</span>
+                <span>by {{ entry.author }}</span>
+                <span style="color:#00f; font-size:0.85em;">({{ entry.hash }})</span>
+              </div>
             </li>
           {% endfor %}
         </ul>
