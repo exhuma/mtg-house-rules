@@ -1,0 +1,10 @@
+# Magic: The Gathering Color Palette
+
+white:    #f8f6e7
+blue:     #1e6ba8
+black:    #231f20
+red:      #be2d26
+green:    #217346
+gold:     #c7a008
+colorless:#bfc2c2
+border:   #bfa76a

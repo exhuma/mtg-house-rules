@@ -1,19 +1,46 @@
+:root {
+  --mtg-white: #f8f6e7;
+  --mtg-blue: #1e6ba8;
+  --mtg-black: #231f20;
+  --mtg-red: #be2d26;
+  --mtg-green: #217346;
+  --mtg-gold: #c7a008;
+  --mtg-colorless: #bfc2c2;
+  --mtg-border: #bfa76a;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Magic: The Gathering inspired custom styles */
 .mtg-card {
-  @apply bg-mtgWhite border-4 border-mtgGold rounded-lg shadow-mtg p-6 mb-6 prose prose-lg;
+  background: var(--mtg-white);
+  border: 2px solid var(--mtg-border);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px 0 rgba(35,31,32,0.25);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .mtg-navbar {
-  @apply flex bg-mtgBlack text-mtgGold px-4 py-2 items-center shadow-mtg;
+  @apply flex justify-center bg-mtgBlack bg-opacity-60 px-4 py-2 items-center shadow-mtg rounded-b-xl backdrop-blur-md mb-8;
 }
 .mtg-navbar a {
-  @apply text-mtgGold hover:text-mtgWhite px-4 py-2 rounded-t-lg transition-colors duration-200 font-bold;
+  @apply relative mx-2 px-6 py-2 font-bold text-mtgGold text-2xl transition-all duration-200 rounded-xl;
+  background: rgba(255,255,255,0.10);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+  border: 1.5px solid rgba(199,160,8,0.4);
+  border-bottom: none;
+  backdrop-filter: blur(4px);
 }
-.mtg-navbar a.active {
-  @apply bg-mtgGold text-mtgBlack;
+.mtg-navbar a:not(:last-child) {
+  border-right: none;
+}
+.mtg-navbar a.active, .mtg-navbar a:hover {
+  background: rgba(255,255,255,0.30);
+  color: #231f20;
+  border-color: #c7a008;
+  z-index: 1;
 }
 body {
   @apply bg-mtgGreen bg-opacity-10 min-h-screen;
