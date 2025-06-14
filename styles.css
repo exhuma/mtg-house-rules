@@ -53,3 +53,19 @@ body {
   margin: 0 0.05em;
   object-fit: contain;
 }
+.mana-number-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 15px;
+  width: 15px;
+  margin: 0 0.05em;
+  background: #bfc2c2;
+  color: #231f20;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 50%;
+  font-family: inherit;
+  vertical-align: middle;
+  text-align: center;
+}

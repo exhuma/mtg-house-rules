@@ -15,7 +15,13 @@ module.exports = function manaPlugin(md) {
       if (matches) {
         matches.forEach(symbol => {
           const token = state.push('html_inline', '', 0);
-          token.content = `<img class=\"mana-symbol\" src=\"/assets/mana/${symbol}.webp\" alt=\"${symbol}\" />`;
+          if (/^\d+$/.test(symbol) || symbol === 'X') {
+            // Render numbers and X as styled span
+            token.content = `<span class=\"mana-number-symbol\">${symbol}</span>`;
+          } else {
+            // Render other symbols as images
+            token.content = `<img class=\"mana-symbol\" src=\"/assets/mana/${symbol}.webp\" alt=\"${symbol}\" />`;
+          }
         });
       }
     }
