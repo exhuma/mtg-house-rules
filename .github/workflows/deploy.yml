@@ -32,6 +32,12 @@ jobs:
       - name: Generate change-log.json
         run: node scripts/generate-changelog.js
 
+      - name: Upload change-log.json artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: change-log-json
+          path: change-log.json
+
       - name: Build site
         run: ELEVENTY_ENV=production npm run build
 

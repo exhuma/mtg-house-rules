@@ -22,3 +22,7 @@ const commits = raw.split('\n').filter(Boolean).map(line => {
 });
 
 fs.writeFileSync('change-log.json', JSON.stringify(commits, null, 2));
+
+// Print the generated changelog to stdout for debugging
+console.log('Generated change-log.json:');
+console.log(JSON.stringify(commits, null, 2));
