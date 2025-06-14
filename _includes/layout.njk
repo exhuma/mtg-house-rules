@@ -20,6 +20,16 @@
     .font-body {
       font-family: 'EB Garamond', serif;
     }
+    .change-log {
+      font-size: 0.875rem;
+      color: #222;
+      background: rgba(255,255,255,0.85);
+      margin-top: 2rem;
+      border-top: 1px solid #444;
+      padding-top: 1rem;
+      border-radius: 0.5em;
+      box-shadow: 0 2px 8px 0 rgba(35,31,32,0.10);
+    }
   </style>
 </head>
 <body class="fantasy-bg font-body">
@@ -31,6 +41,19 @@
   <div class="mtg-card max-w-2xl mx-auto">
     <div class="prose prose-lg font-body">
       {{ content | safe }}
+    </div>
+    <div class="change-log">
+      {% if changeLog.length > 0 %}
+        <ul style="list-style:none; margin:0; padding:0;">
+          {% for entry in changeLog %}
+            <li>
+              <span>[{{ entry.timestamp }}] Updated by {{ entry.author }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <span>No recent changes.</span>
+      {% endif %}
     </div>
   </div>
 </body>

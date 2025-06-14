@@ -88,3 +88,27 @@ body {
   vertical-align: middle;
   text-align: center;
 }
+.change-log {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  font-size: 0.85em;
+  color: #666;
+  opacity: 0.85;
+  z-index: 100;
+  background: rgba(255,255,255,0.85);
+  border-radius: 0.5em;
+  padding: 0.3em 0.8em;
+  box-shadow: 0 2px 8px 0 rgba(35,31,32,0.10);
+  transition: all 0.2s;
+}
+@media (max-width: 700px) {
+  .change-log {
+    position: static;
+    display: block;
+    margin: 2em auto 0 auto;
+    box-shadow: none;
+    background: none;
+    text-align: center;
+  }
+}
