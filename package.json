@@ -3,5 +3,10 @@
     "@11ty/eleventy": "^3.1.1",
     "@tailwindcss/typography": "^0.5.16",
     "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./styles.css -o ./_site/styles.css --minify",
+    "build:11ty": "npx eleventy",
+    "build": "npm run build:css && npm run build:11ty"
   }
 }
