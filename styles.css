@@ -45,3 +45,11 @@
 body {
   @apply bg-mtgGreen bg-opacity-10 min-h-screen;
 }
+.mana-symbol {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  margin: 0 0.05em;
+  object-fit: contain;
+}
