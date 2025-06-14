@@ -1,4 +1,6 @@
-module.exports = function manaPlugin(md) {
+module.exports = function manaPlugin(md, options = {}) {
+  // Allow passing pathPrefix from Eleventy config
+  const pathPrefix = options.pathPrefix || '/';
   md.inline.ruler.after('emphasis', 'mana', function(state, silent) {
     const start = state.pos;
     const src = state.src;
@@ -20,7 +22,7 @@ module.exports = function manaPlugin(md) {
             token.content = `<span class=\"mana-number-symbol\">${symbol}</span>`;
           } else {
             // Render other symbols as images
-            token.content = `<img class=\"mana-symbol\" src=\"/assets/mana/${symbol}.webp\" alt=\"${symbol}\" />`;
+            token.content = `<img class=\"mana-symbol\" src=\"${pathPrefix}assets/mana/${symbol}.webp\" alt=\"${symbol}\" />`;
           }
         });
       }

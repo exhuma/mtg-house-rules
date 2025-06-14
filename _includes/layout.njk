@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title or "MTG House Rules" }}</title>
-  <link href="/styles.css" rel="stylesheet">
+  <link href="{{ '/styles.css' | url }}" rel="stylesheet">
   <!-- Fantasy/MTG fonts -->
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -25,7 +25,7 @@
 <body class="fantasy-bg font-body">
   <nav class="mtg-navbar font-body text-lg">
     {% for page in collections.pages %}
-      <a href="{{ page.url }}" class="{% if page.url == page.url or page.url == page.inputPath %}active{% endif %}">{{ page.data.title or page.fileSlug }}</a>
+      <a href="{{ page.url | url }}" class="{% if page.url == page.url or page.url == page.inputPath %}active{% endif %}">{{ page.data.title or page.fileSlug }}</a>
     {% endfor %}
   </nav>
   <div class="mtg-card max-w-2xl mx-auto">

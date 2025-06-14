@@ -1,8 +1,11 @@
 const manaPlugin = require('./markdown-it-mana');
 
+const isProd = process.env.ELEVENTY_ENV === 'production';
+const pathPrefix = isProd ? '/mtg-house-rules/' : '/';
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.amendLibrary('md', mdLib => {
-    mdLib.use(manaPlugin);
+    mdLib.use(manaPlugin, { pathPrefix });
   });
 
   // Passthrough copy for static assets
@@ -21,6 +24,7 @@ module.exports = function(eleventyConfig) {
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
+    dataTemplateEngine: "njk",
+    pathPrefix: pathPrefix
   };
 };
