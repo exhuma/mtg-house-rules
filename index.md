@@ -1,3 +1,7 @@
+---
+layout: layout.njk
+title: Index
+---
 # Index
 
 Hello World!
